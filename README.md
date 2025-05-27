@@ -10,7 +10,7 @@ cd SADDER
 ```
 
 ## Installation and Setup
-To set up the virtual environment and install the required packages, use the following commands:
+#### To setup the virtual environment and install the required packages, use the following commands:
 ```bash
 conda create -n sadder python=3.10
 
@@ -18,7 +18,11 @@ conda activate sadder
 
 source install_environment.sh
 ```
-**(Optional)** or manually execute the following command:
+#### or manually execute the following command:
+<details>
+<summary>📥 <strong>(Optional)</strong> Setup the virtual environment of UWDepth with SADDER. (click to expand)</summary>
+
+#### Run the commands below to manually setup the virtual environment of UWDepth with SADDER:
 ```bash
 # CUDA 11.3
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
@@ -29,8 +33,12 @@ pip install opencv-contrib-python
 
 pip install tifffile
 ```
+</details>
 
-**(Optional)** If you choose to execute the command manually, you also need to manually set up the virtual environment of BARIS-ERA:
+<details>
+<summary>📥 <strong>(Optional)</strong> Setup the virtual environment of BARIS-ERA. (click to expand)</summary>
+
+#### Run the commands below to manually setup the virtual environment of BARIS-ERA:
 ```bash
 git clone https://github.com/PANpinchi/BARIS-ERA.git
 
@@ -49,8 +57,21 @@ pip install mmcls
 pip install yapf==0.40.1
 pip install natsort
 ```
+</details>
 
-**(Optional)** and download the pre-trained BARIS-ERA model:
+## Download the Required Data
+
+#### Download the pretrained model weights by running the following:
+```bash
+source download_pretrained_weights.sh
+```
+
+#### or manually execute the following command:
+
+<details>
+<summary>📥 <strong>(Optional)</strong> Download Pre-trained BARIS-ERA Model. (click to expand)</summary>
+
+#### Run the commands below to download the pre-trained BARIS-ERA model:
 ```bash
 mkdir pretrained
 
@@ -63,14 +84,12 @@ gdown --id 1_MxeMnI11CuvWHGEvud7COMwsPyVeNNv
 cd ../..
 ```
 Note: `*.pth` files should be placed in the `/pretrained` folder.
+</details>
 
+<details>
+<summary>📥 <strong>(Optional)</strong> Download Pre-trained CPD Model. (click to expand)</summary>
 
-Download the pretrained model weights by running the following:
-```bash
-source download_pretrained_weights.sh
-```
-
-**(Optional)** or manually execute the following commands below to download the pre-trained CPD model:
+#### Run the commands below to download the pre-trained CPD model:
 ```bash
 cd CPD
 
@@ -79,9 +98,12 @@ gdown --id 1Ezqf3rfBbC4iREjE9TfqDt5_QEvBXZ7F
 cd ..
 ```
 Note: `CPD-R.pth` files should be placed in the `/CPD` folder.
+</details>
 
+<details>
+<summary>📥 <strong>(Optional)</strong> Download Pre-trained UDepth Model. (click to expand)</summary>
 
-**(Optional)** Run the commands below to download the pre-trained UDepth model:
+#### Run the commands below to download the pre-trained UDepth model:
 ```bash
 mkdir saved_udepth_model
 
@@ -94,8 +116,12 @@ gdown --id 1MaNGn8aKYDXrtmuTsaNlhIyk-IeMRJnO
 cd ..
 ```
 Note: `*.pth` files should be placed in the `/saved_udepth_model` folder.
+</details>
 
-**(Optional)** Run the commands below to download the pre-trained UWDepth model:
+<details>
+<summary>📥 <strong>(Optional)</strong> Download Pre-trained UWDepth Model. (click to expand)</summary>
+
+#### Run the commands below to download the pre-trained UWDepth model:
 ```bash
 cd data/saved_models
 
@@ -108,8 +134,13 @@ gdown --id 1seBVgaUzDZKMfWBmS0ZMUDo_NdDV0y9B
 cd ../..
 ```
 Note: `*.pth` files should be placed in the `/data/saved_models` folder.
+</details>
 
-**(Optional)** Run the commands below to download the pre-trained UWDepth with SADDER model:
+<details>
+<summary>📥 <strong>(Optional)</strong> Download Pre-trained UWDepth with SADDER Model. (click to expand)</summary>
+
+#### Run the commands below to download the pre-trained UWDepth with SADDER model:
+
 ```bash
 cd saved_models
 
@@ -118,10 +149,10 @@ gdown --id 1eqbV9Jq7WCSWd6btxHVD1r2ykMyWLhpe
 cd ..
 ```
 Note: `*.pth` files should be placed in the `/saved_models` folder.
-
+</details>
 
 ## Inference
-Run the commands below to perform a pretrained model on images.
+#### Run the commands below to perform a pretrained model on images.
 ```bash
 python inference.py
 ```
@@ -148,7 +179,7 @@ python helper_scripts/extract_inference_data_seg.py
 ```
 
 ## Citation
-If you use this code, please cite the following:
+#### If you use this code, please cite the following:
 ```bibtex
 @misc{pan2025_sadder,
     title  = {SADDER: Segmentation-Augmented Differential Depth Estimation Regressor for Underwater Depth Estimation},
