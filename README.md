@@ -65,7 +65,12 @@ cd ../..
 Note: `*.pth` files should be placed in the `/pretrained` folder.
 
 
-Run the commands below to download the pre-trained CPD model:
+Download the pretrained model weights by running the following:
+```bash
+source download_pretrained_weights.sh
+```
+
+**(Optional)** or manually execute the following commands below to download the pre-trained CPD model:
 ```bash
 cd CPD
 
@@ -76,7 +81,7 @@ cd ..
 Note: `CPD-R.pth` files should be placed in the `/CPD` folder.
 
 
-Run the commands below to download the pre-trained UDepth model:
+**(Optional)** Run the commands below to download the pre-trained UDepth model:
 ```bash
 mkdir saved_udepth_model
 
@@ -90,7 +95,7 @@ cd ..
 ```
 Note: `*.pth` files should be placed in the `/saved_udepth_model` folder.
 
-Run the commands below to download the pre-trained UWDepth model:
+**(Optional)** Run the commands below to download the pre-trained UWDepth model:
 ```bash
 cd data/saved_models
 
@@ -104,7 +109,7 @@ cd ../..
 ```
 Note: `*.pth` files should be placed in the `/data/saved_models` folder.
 
-Run the commands below to download the pre-trained UWDepth with SADDER model:
+**(Optional)** Run the commands below to download the pre-trained UWDepth with SADDER model:
 ```bash
 cd saved_models
 
