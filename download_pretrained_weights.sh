@@ -28,6 +28,7 @@ gdown --id 1seBVgaUzDZKMfWBmS0ZMUDo_NdDV0y9B
 cd ../..
 
 echo "✅ Download the pre-trained UWDepth with SADDER model..."
+mkdir saved_models
 cd saved_models
 gdown --id 1eqbV9Jq7WCSWd6btxHVD1r2ykMyWLhpe
 cd ..
