@@ -22,8 +22,7 @@ from tqdm import tqdm
 BATCH_SIZE = 6
 DEVICE = "cuda" if torch.cuda.is_available() else "cpu"
 MODEL_PATH = (
-    # "../uw_depth/data/saved_models/model_e22_udfnet_lr0.0001_bs6_lrd0.9.pth"
-    "saved_models/model_e24_udfnet_lr1e-05_bs6_lrd0.9.pth"
+    "saved_models/model_e24_udfnet_lr1e-05_bs6_lrd0.9_with_sadder"
 )
 DATASET = get_example_dataset_inference(index_file="data/example_dataset/rgb/inference.csv")
 OUT_PATH = "data/out_example"

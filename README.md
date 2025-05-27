@@ -18,7 +18,7 @@ conda activate sadder
 
 source install_environment.sh
 ```
-or manually execute the following command:
+**(Optional)** or manually execute the following command:
 ```bash
 # CUDA 11.3
 conda install pytorch==1.12.0 torchvision==0.13.0 torchaudio==0.12.0 cudatoolkit=11.3 -c pytorch
@@ -28,7 +28,10 @@ pip install -r dependencies.txt
 pip install opencv-contrib-python
 
 pip install tifffile
+```
 
+**(Optional)** If you choose to execute the command manually, you also need to manually set up the virtual environment of BARIS-ERA:
+```bash
 git clone https://github.com/PANpinchi/BARIS-ERA.git
 
 cd ./BARIS-ERA
@@ -45,9 +48,22 @@ pip install gdown
 pip install mmcls
 pip install yapf==0.40.1
 pip install natsort
-
-cd ..
 ```
+
+**(Optional)** and download the pre-trained BARIS-ERA model:
+```bash
+mkdir pretrained
+
+cd pretrained
+
+gdown --id 1-nK4MYPiW5bB8wDHbIXzLimRkLLpek6x
+
+gdown --id 1_MxeMnI11CuvWHGEvud7COMwsPyVeNNv
+
+cd ../..
+```
+Note: `*.pth` files should be placed in the `/pretrained` folder.
+
 
 Run the commands below to download the pre-trained CPD model:
 ```bash

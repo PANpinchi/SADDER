@@ -20,5 +20,11 @@ pip install gdown
 pip install mmcls
 pip install yapf==0.40.1
 pip install natsort
-cd ..
+
+mkdir pretrained
+cd pretrained
+gdown --id 1-nK4MYPiW5bB8wDHbIXzLimRkLLpek6x
+gdown --id 1_MxeMnI11CuvWHGEvud7COMwsPyVeNNv
+cd ../..
+
 echo "🎉 All packages installed successfully!"

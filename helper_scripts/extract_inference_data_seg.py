@@ -2,7 +2,7 @@ import sys
 import os
 import argparse
 
-mmdet_path = os.path.abspath("../WaterMask")
+mmdet_path = os.path.abspath("./BARIS-ERA")
 sys.path.insert(0, mmdet_path)
 
 import torch
@@ -101,11 +101,19 @@ if __name__ == "__main__":
     parser.add_argument("--data_dir", type=str, default="./data/example_dataset/rgb/")
     args = parser.parse_args()
 
+    # BARIS-ERA Config (Swin Backbone)
     config = {
-        "checkpoints": "../WaterMask/outputs_swin_base_ours_pr2_old/epoch_11.pth",
-        "config": "../WaterMask/configs/_ours_/ablation/mask_rcnn_swin-b-p4-w7_fpn_1x_coco_pr2.py",
-        "data_dir": args.data_dir,
+        "checkpoints": "./BARIS-ERA/pretrained/baris-era_swin_base.pth",
+        "config": "./BARIS-ERA/configs/_ours_/ablation/mask_rcnn_swin-b-p4-w7_fpn_1x_coco_pr2.py",
+        "data_dir": "./data/",
     }
+
+    # BARIS-ERA Config (ConvNeXt Backbone)
+    # config = {
+    #     "checkpoints": "./BARIS-ERA/pretrained/baris-era_convnext_base.pth",
+    #     "config": "./BARIS-ERA/configs/_ours_/mask_rcnn_convnext-b_p4_w7_fpn_1x_coco.py",
+    #     "data_dir": args.data_dir,
+    # }
 
     # FLSea
     # Max Segms:  66
