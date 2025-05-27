@@ -123,6 +123,21 @@ Note: `*.pth` files should be placed in the `/saved_models` folder.
 ## Inference
 Run the commands below to perform a pretrained model on images.
 ```bash
+python inference.py
+```
+
+## Preprocessing
+The `helper_scripts` folder contains useful scripts which can be used for preprocessing of datasets, such as extracting visual features for usage as sparse depth measurements or creating train/test splits. In general, every data point in a dataset needs:
+- RGB image (see `data/example_dataset/rgb`)
+- keypoint location with corresponding depth (see `data/example_dataset/features`) *
+- depth image ground truth (for training / evaluation only, see `data/example_dataset/depth`)
+
+\* check out `helper_scripts/extract_dataset_features.py` for a simple example on how such features can be generated if ground truth is available. If not, you could use e.g. SLAM.
+
+Then, the `.csv` file defines the tuples, see `data/example_dataset/dataset.csv`.
+
+Make sure that you also load your data correctly via the dataloader, e.g. depending on your dataset, images can be in uint8, uint16 or float format (see `data/example_dataset/dataset.py`)
+```bash
 python inference_data_preprocessing.py
 
 python helper_scripts/extract_inference_data_depth.py
@@ -130,8 +145,6 @@ python helper_scripts/extract_inference_data_depth.py
 python helper_scripts/extract_inference_data_features.py
 
 python helper_scripts/extract_inference_data_seg.py
-
-python inference.py
 ```
 
 ## Citation
